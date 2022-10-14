@@ -1,13 +1,14 @@
 ---
 export interface Props {
-  title: string;
-  body: string;
+  title?: string;
+  body?: string;
 }
 
 const { title, body } = Astro.props as Props;
 ---
 
 <div class="card">
+  <slot />
   <h3>{title}</h3>
   <p>{body}</p>
 </div>
